@@ -18,23 +18,23 @@
 */
 
 const daftarPeserta = [
-  { nama: "Ayu Lestari", kelas: "X RPL 1", ikutMETIC: true },
-  { nama: "Bagas Saputra", kelas: "X RPL 1", ikutMETIC: false },
-  { nama: "Citra Dewi", kelas: "X RPL 2", ikutMETIC: true },
-  { nama: "Dimas Prakoso", kelas: "X RPL 2", ikutMETIC: false },
-  { nama: "Eka Wulandari", kelas: "X RPL 3", ikutMETIC: true },
+  { nama: "Yova", kelas: "X ICP TKJ", ikutMETIC: true },
+  { nama: "Keanu", kelas: "X RPL 1", ikutMETIC: true },
+  { nama: "Azka", kelas: "X RPL 2", ikutMETIC: true },
+  { nama: "Dimas", kelas: "X RPL 2", ikutMETIC: false },
+  { nama: "Wulan", kelas: "X RPL 3", ikutMETIC: false },
 ];
 
 // TODO 1: Gunakan filter() untuk mengambil peserta yang ikut METIC.
-const anggotaMETIC = [];
+const anggotaMETIC = daftarPeserta.filter(peserta => peserta.ikutMETIC);
 
 // TODO 2: Gunakan map() untuk mengambil nama anggota saja.
-const namaAnggotaMETIC = [];
+const namaAnggotaMETIC = anggotaMETIC.map(peserta => peserta.nama);
 
 console.log("Daftar anggota METIC:");
 console.log(namaAnggotaMETIC);
 console.log(`Total anggota METIC: ${namaAnggotaMETIC.length} orang`);
 
 console.assert(anggotaMETIC.length === 3, "Harusnya ada 3 anggota METIC");
-console.assert(namaAnggotaMETIC.includes("Ayu Lestari"), "Ayu Lestari harus ada");
-console.assert(!namaAnggotaMETIC.includes("Bagas Saputra"), "Bagas Saputra tidak ikut METIC");
+console.assert(namaAnggotaMETIC.includes("Yova"), "Yova harus ada");
+console.assert(!namaAnggotaMETIC.includes("Dimas"), "Dimas tidak ikut METIC");
