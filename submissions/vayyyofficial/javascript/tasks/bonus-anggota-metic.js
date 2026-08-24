@@ -19,10 +19,10 @@
 
 const daftarPeserta = [
   { nama: "Yova", kelas: "X ICP TKJ", ikutMETIC: true },
-  { nama: "Keanu", kelas: "X RPL 1", ikutMETIC: true },
-  { nama: "Azka", kelas: "X RPL 2", ikutMETIC: true },
-  { nama: "Dimas", kelas: "X RPL 2", ikutMETIC: false },
-  { nama: "Wulan", kelas: "X RPL 3", ikutMETIC: false },
+  { nama: "Keanu", kelas: "X ICP TKJ", ikutMETIC: false },
+  { nama: "Azka", kelas: "X ICP PG", ikutMETIC: true },
+  { nama: "Dimas", kelas: "X ICP RPL", ikutMETIC: false },
+  { nama: "Arlan", kelas: "X ICP RPL", ikutMETIC: true },
 ];
 
 // TODO 1: Gunakan filter() untuk mengambil peserta yang ikut METIC.
@@ -37,4 +37,4 @@ console.log(`Total anggota METIC: ${namaAnggotaMETIC.length} orang`);
 
 console.assert(anggotaMETIC.length === 3, "Harusnya ada 3 anggota METIC");
 console.assert(namaAnggotaMETIC.includes("Yova"), "Yova harus ada");
-console.assert(!namaAnggotaMETIC.includes("Dimas"), "Dimas tidak ikut METIC");
+console.assert(!namaAnggotaMETIC.includes("Dimas"), "Keanu tidak ikut METIC");

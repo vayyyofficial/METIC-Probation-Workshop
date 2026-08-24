@@ -27,7 +27,14 @@ function cekKelulusan(nilai) {
   // 1. Cek dulu apakah nilai bukan number, lebih kecil dari 0, atau lebih besar dari 100.
   // 2. Jika nilai valid dan >= batasLulus, return "Lulus".
   // 3. Jika nilai valid dan < batasLulus, return "Perlu belajar lagi".
-  return "Lengkapi function cekKelulusan";
+  
+  if (typeof nilai !== "number" || nilai < 0 || nilai > 100) {
+    return "Nilai tidak valid";
+  } else if (nilai >= batasLulus) {
+    return "Lulus";
+  } else {
+    return "Perlu belajar lagi";
+  }
 }
 
 console.log(cekKelulusan(90));
